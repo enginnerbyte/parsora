@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>جستجو | پارسورا</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a class="brand" href="index.html" aria-label="صفحه اصلی پارسورا">
+        <img src="images/parsoora-logo.png" alt="لوگوی پارسورا" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-name">پارسورا</span>
+          <span class="brand-caption">همراه دانشجویان</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="منوی اصلی">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="./index.html" class="nav-link">خانه</a></li>
+          <li class="nav-item"><a href="professors.html" class="nav-link">استادها</a></li>
+          <li class="nav-item"><a href="Courses.html" class="nav-link">درس‌ها</a></li>
+          <li class="nav-item"><a href="reviews.html" class="nav-link">تجربه دانشجویان</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">درباره پارسورا</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="login.html" class="header-login">ورود</a>
+        <a href="register.html" class="header-register">ثبت‌نام</a>
+      </div>
+
+      <button type="button" class="mobile-menu-button" aria-label="باز کردن منوی سایت" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <span class="page-hero-eyebrow">جستجو در پارسورا</span>
+        <h1 id="page-title">دنبال چی می‌گردی؟</h1>
+        <p>نام استاد، نام درس یا کد درس را وارد کن.</p>
+
+        <form class="search-page-form" id="search-page-form" role="search" autocomplete="off">
+          <label class="sr-only" for="search-page-input">جستجو</label>
+          <input id="search-page-input" type="search" placeholder="مثلاً: سلیمانی یا هوش مصنوعی..." autocomplete="off">
+          <button type="submit">جستجو</button>
+        </form>
+      </div>
+    </section>
+
+
+    <section class="search-results-section">
+      <div class="container">
+
+        <div class="search-tabs" role="tablist" aria-label="دسته‌بندی نتایج">
+          <button type="button" class="search-tab active" id="tab-professors" role="tab" aria-selected="true">
+            استادها <span class="search-tab-count" id="tab-count-professors">۰</span>
+          </button>
+          <button type="button" class="search-tab" id="tab-courses" role="tab" aria-selected="false">
+            درس‌ها <span class="search-tab-count" id="tab-count-courses">۰</span>
+          </button>
+        </div>
+
+        <p class="search-summary" id="search-summary" hidden></p>
+
+        <div id="results-professors" role="tabpanel">
+          <div class="professors-full-grid" id="search-professors-grid"></div>
+        </div>
+
+        <div id="results-courses" role="tabpanel" hidden>
+          <div class="courses-full-grid" id="search-courses-grid"></div>
+        </div>
+
+        <div class="search-empty" id="search-empty" hidden>
+          <span class="search-empty-icon" aria-hidden="true">🔍</span>
+          <h2>چیزی پیدا نشد</h2>
+          <p>با عبارت دیگری امتحان کن یا املای کلمه را بررسی کن.</p>
+        </div>
+
+        <div class="search-hint" id="search-hint">
+          💡 یک نام یا کلمه بنویس تا نتایج همین‌جا نمایش داده شود.
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+<div class="footer-brand">
+        <a href="index.html" class="footer-brand-link">
+          <img src="images/parsoora-logo.png" alt="لوگوی پارسورا" class="footer-logo">
+          <span class="footer-brand-name">پارسورا</span>
+        </a>
+        <p>همراه دانشجویان برای پیدا کردن اطلاعات استادها و درس‌ها.</p>
+      </div>
+
+      <div class="footer-column">
+        <h2>دسترسی سریع</h2>
+        <ul>
+          <li><a href="index.html">خانه</a></li>
+          <li><a href="professors.html">استادها</a></li>
+          <li><a href="Courses.html">درس‌ها</a></li>
+          <li><a href="reviews.html">تجربه دانشجویان</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h2>پارسورا</h2>
+        <ul>
+          <li><a href="about.html">درباره ما</a></li>
+          <li><a href="contact.html">ارتباط با ما</a></li>
+          <li><a href="rules.html">قوانین و شرایط</a></li>
+          <li><a href="privacy.html">حریم خصوصی</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h2>جستجو</h2>
+        <p>برای پیدا کردن استاد یا درس از جستجوی پارسورا استفاده کن.</p>
+        <a href="search.html" class="footer-search-link">
+          رفتن به جستجو
+          <span aria-hidden="true">←</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© ۱۴۰۵ پارسورا. تمامی حقوق محفوظ است.</p>
+    </div>
+  </footer>
+
+
+  <script src="data.js"></script>
+  <script src="Script.js"></script>
+
+</body>
+</html>

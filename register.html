@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ثبت‌نام | پارسورا</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a class="brand" href="index.html" aria-label="صفحه اصلی پارسورا">
+        <img src="images/parsoora-logo.png" alt="لوگوی پارسورا" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-name">پارسورا</span>
+          <span class="brand-caption">همراه دانشجویان</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="منوی اصلی">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="./index.html" class="nav-link">خانه</a></li>
+          <li class="nav-item"><a href="professors.html" class="nav-link">استادها</a></li>
+          <li class="nav-item"><a href="Courses.html" class="nav-link">درس‌ها</a></li>
+          <li class="nav-item"><a href="reviews.html" class="nav-link">تجربه دانشجویان</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">درباره پارسورا</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="login.html" class="header-login">ورود</a>
+        <a href="register.html" class="header-register">ثبت‌نام</a>
+      </div>
+
+      <button type="button" class="mobile-menu-button" aria-label="باز کردن منوی سایت" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <span class="page-hero-eyebrow">به پارسورا خوش آمدی</span>
+        <h1 id="page-title">ساخت حساب کاربری</h1>
+        <p>در چند ثانیه ثبت‌نام کن و تجربه‌ات را با بقیه به اشتراک بگذار.</p>
+      </div>
+    </section>
+
+
+    <section class="auth-section">
+      <div class="container">
+
+        <div class="auth-card">
+
+          <div class="auth-header">
+            <div class="auth-icon" aria-hidden="true">✨</div>
+            <h1>ثبت‌نام</h1>
+            <p>اطلاعات خودت را وارد کن.</p>
+          </div>
+
+          <form class="auth-form" id="register-form" novalidate>
+
+            <div class="form-group">
+              <label class="form-label" for="register-name">نام و نام خانوادگی</label>
+              <input class="form-input" id="register-name" name="name" type="text" placeholder="مثلاً علی محمدی" autocomplete="name" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="register-student-id">شماره دانشجویی</label>
+              <input class="form-input" id="register-student-id" name="studentId" type="text" inputmode="numeric" placeholder="مثلاً ۴۰۱۱۲۳۴۵" autocomplete="off" required>
+              <small class="form-hint">شماره دانشجویی، نام کاربری ورود تو خواهد بود.</small>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="register-email">
+                ایمیل
+                <span class="form-optional">(اختیاری)</span>
+              </label>
+              <input class="form-input" id="register-email" name="email" type="email" placeholder="example@email.com" autocomplete="email">
+              <small class="form-hint">فقط برای بازیابی رمز عبور استفاده می‌شود.</small>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="register-department">گروه آموزشی</label>
+<select class="form-select" id="register-department" name="department">
+                <option value="">انتخاب کن...</option>
+                <option value="کامپیوتر">مهندسی کامپیوتر</option>
+                <option value="برق">مهندسی برق</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="register-password">رمز عبور</label>
+              <div class="password-wrapper">
+                <input class="form-input" id="register-password" name="password" type="password" placeholder="حداقل ۶ کاراکتر" autocomplete="new-password" required>
+                <button type="button" class="password-toggle" data-target="register-password" aria-label="نمایش رمز عبور" aria-pressed="false">
+                  <span class="password-toggle-icon" aria-hidden="true">👁</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="register-confirm">تکرار رمز عبور</label>
+              <div class="password-wrapper">
+                <input class="form-input" id="register-confirm" name="confirm" type="password" placeholder="••••••••" autocomplete="new-password" required>
+                <button type="button" class="password-toggle" data-target="register-confirm" aria-label="نمایش رمز عبور" aria-pressed="false">
+                  <span class="password-toggle-icon" aria-hidden="true">👁</span>
+                </button>
+              </div>
+            </div>
+
+            <button type="submit" class="auth-button">ساخت حساب</button>
+
+          </form>
+
+          <p class="auth-footer">
+            قبلاً ثبت‌نام کرده‌ای؟
+            <a href="login.html">وارد شو</a>
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       مودال قوانین و شرایط (موقع ثبت‌نام)
+       ========================================================= -->
+  <div class="terms-modal-overlay" id="terms-modal-overlay" hidden>
+    <div class="terms-modal" role="dialog" aria-modal="true" aria-labelledby="terms-modal-title">
+
+      <div class="terms-modal-header">
+        <h2 id="terms-modal-title">
+          <span aria-hidden="true">📜</span>
+          قوانین و شرایط پارسورا
+        </h2>
+        <button type="button" class="terms-modal-close" id="terms-modal-close" aria-label="بستن پنجره">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+
+      <div class="terms-modal-body">
+
+        <p class="terms-modal-intro">
+          قبل از ساخت حساب، لطفاً خلاصه‌ی قوانین پارسورا را بخوان. با تیک زدن، تأیید می‌کنی که این قوانین را می‌پذیری.
+        </p>
+
+        <div class="terms-list">
+
+          <div class="terms-item">
+            <span class="terms-item-num">۱</span>
+            <div>
+              <h3>اطلاعات واقعی</h3>
+              <p>اطلاعاتی که وارد می‌کنی باید صحیح و واقعی باشد.</p>
+            </div>
+          </div>
+
+          <div class="terms-item">
+            <span class="terms-item-num">۲</span>
+            <div>
+              <h3>نظرهای صادقانه</h3>
+              <p>نظر و امتیازت باید بر اساس تجربه‌ی واقعی از کلاس باشد.</p>
+            </div>
+          </div>
+
+          <div class="terms-item">
+            <span class="terms-item-num">۳</span>
+            <div>
+              <h3>احترام به دیگران</h3>
+              <p>توهین، تهمت یا مطالب تبعیض‌آمیز در پارسورا ممنوع است.</p>
+            </div>
+          </div>
+
+          <div class="terms-item">
+            <span class="terms-item-num">۴</span>
+            <div>
+              <h3>حریم خصوصی</h3>
+              <p>اطلاعات شخصی تو محفوظ می‌مونه و در اختیار کسی قرار نمی‌گیرد.</p>
+            </div>
+          </div>
+
+          <div class="terms-item">
+            <span class="terms-item-num">۵</span>
+            <div>
+              <h3>مسئولیت محتوا</h3>
+              <p>هر کاربر مسئول محتوایی است که منتشر می‌کند.</p>
+            </div>
+          </div>
+
+        </div>
+<a href="rules.html" target="_blank" rel="noopener noreferrer" class="terms-modal-full-link">
+          <span aria-hidden="true">📖</span>
+          خواندن متن کامل قوانین
+          <span aria-hidden="true">←</span>
+        </a>
+
+        <label class="terms-modal-agree" id="terms-modal-agree-label">
+          <input type="checkbox" id="terms-modal-agree-input">
+          <span>
+            <strong>قوانین و شرایط پارسورا</strong> را می‌پذیرم
+          </span>
+        </label>
+
+      </div>
+
+      <div class="terms-modal-footer">
+        <button type="button" class="professor-action-btn professor-action-primary" id="terms-modal-confirm" disabled>
+          <span aria-hidden="true">✓</span>
+          تایید و ساخت حساب
+        </button>
+        <button type="button" class="professor-action-btn professor-action-secondary" id="terms-modal-cancel">
+          انصراف
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <a href="index.html" class="footer-brand-link">
+          <img src="images/parsoora-logo.png" alt="لوگوی پارسورا" class="footer-logo">
+          <span class="footer-brand-name">پارسورا</span>
+        </a>
+        <p>همراه دانشجویان برای پیدا کردن اطلاعات استادها و درس‌ها.</p>
+      </div>
+
+      <div class="footer-column">
+        <h2>دسترسی سریع</h2>
+        <ul>
+          <li><a href="index.html">خانه</a></li>
+          <li><a href="professors.html">استادها</a></li>
+          <li><a href="Courses.html">درس‌ها</a></li>
+          <li><a href="reviews.html">تجربه دانشجویان</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h2>پارسورا</h2>
+        <ul>
+          <li><a href="about.html">درباره ما</a></li>
+          <li><a href="contact.html">ارتباط با ما</a></li>
+          <li><a href="rules.html">قوانین و شرایط</a></li>
+          <li><a href="privacy.html">حریم خصوصی</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h2>جستجو</h2>
+        <p>برای پیدا کردن استاد یا درس از جستجوی پارسورا استفاده کن.</p>
+        <a href="search.html" class="footer-search-link">
+          رفتن به جستجو
+          <span aria-hidden="true">←</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© ۱۴۰۵ پارسورا. تمامی حقوق محفوظ است.</p>
+    </div>
+  </footer>
+
+
+  <script src="Script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>پارسورا | همراه دانشجویان</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a class="brand" href="index.html" aria-label="صفحه اصلی پارسورا">
+        <img src="images/parsoora-logo.png" alt="لوگوی پارسورا" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-name">پارسورا</span>
+          <span class="brand-caption">همراه دانشجویان</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="منوی اصلی">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="./index.html" class="nav-link active">خانه</a></li>
+          <li class="nav-item"><a href="professors.html" class="nav-link">استادها</a></li>
+          <li class="nav-item"><a href="Courses.html" class="nav-link">درس‌ها</a></li>
+          <li class="nav-item"><a href="reviews.html" class="nav-link">تجربه دانشجویان</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">درباره پارسورا</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="login.html" class="header-login">ورود</a>
+        <a href="register.html" class="header-register">ثبت‌نام</a>
+      </div>
+
+      <button type="button" class="mobile-menu-button" aria-label="باز کردن منوی سایت" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+          <span class="hero-badge">🎓 یک همراه ساده برای زندگی دانشجویی</span>
+
+          <h1 id="hero-title">
+            پارسورا,
+            <span>همراه دانشجویان</span>
+          </h1>
+
+          <p class="hero-description">
+            استاد موردنظرت را پیدا کن، درباره درس‌ها اطلاعات بگیر و تجربه دانشجویان دیگر را بخوان.
+          </p>
+
+          <form class="hero-search" action="search.html" method="get">
+            <label class="sr-only" for="main-search">جستجوی استاد یا درس</label>
+            <input id="main-search" name="q" type="search" placeholder="نام استاد، نام درس یا کد درس را وارد کنید..." autocomplete="off">
+            <button type="submit" class="search-button">جستجو</button>
+          </form>
+
+          <div class="hero-quick-links" aria-label="دسترسی سریع">
+            <a href="professors.html" class="quick-link">مشاهده استادها</a>
+            <a href="Courses.html" class="quick-link">مشاهده درس‌ها</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-scene">
+
+            <div class="hero-blob hero-blob-1"></div>
+            <div class="hero-blob hero-blob-2"></div>
+            <div class="hero-blob hero-blob-3"></div>
+
+            <div class="hero-center-circle">
+              <div class="hero-center-emoji">🎓</div>
+            </div>
+
+            <div class="hero-float hero-float-1">📚</div>
+            <div class="hero-float hero-float-2">✏️</div>
+            <div class="hero-float hero-float-3">💡</div>
+            <div class="hero-float hero-float-4">🎯</div>
+            <div class="hero-float hero-float-5">💻</div>
+            <div class="hero-float hero-float-6">🏆</div>
+            <div class="hero-float hero-float-7">🧠</div>
+            <div class="hero-float hero-float-8">⚡</div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+<section class="features-section" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-eyebrow">دسترسی سریع</span>
+          <h2 id="features-title">از کجا شروع کنیم؟</h2>
+          <p>دو بخش اصلی پارسورا را سریع پیدا کن.</p>
+        </div>
+
+        <div class="feature-grid">
+
+          <article class="feature-card feature-card-professors">
+            <div class="feature-icon" aria-hidden="true">👨‍🏫</div>
+            <div class="feature-content">
+              <span class="feature-label">اساتید دانشگاه</span>
+              <h3>استادها</h3>
+              <p>استاد موردنظر را پیدا کن و امتیازها و تجربه‌های دانشجویان را ببین.</p>
+              <a href="professors.html" class="feature-link" aria-label="مشاهده استادها">
+                مشاهده استادها
+                <span aria-hidden="true">←</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="feature-card feature-card-courses">
+            <div class="feature-icon" aria-hidden="true">📚</div>
+            <div class="feature-content">
+              <span class="feature-label">اطلاعات دروس</span>
+              <h3>درس‌ها</h3>
+              <p>نام درس، کد درس و اطلاعات مرتبط با درس‌ها را پیدا کن.</p>
+              <a href="Courses.html" class="feature-link" aria-label="مشاهده درس‌ها">
+                مشاهده درس‌ها
+                <span aria-hidden="true">←</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts-cta-section" aria-labelledby="contacts-cta-title">
+      <div class="container">
+        <div class="contacts-cta-card">
+
+          <div class="contacts-cta-icon" aria-hidden="true">📞</div>
+
+          <div class="contacts-cta-content">
+            <h2 id="contacts-cta-title">شماره‌های ضروری دانشگاه</h2>
+            <p>داخلی‌های دانشکده فنی و مهندسی رو یه جا ببین.</p>
+          </div>
+
+          <a href="contact.html" class="contacts-cta-link">
+            مشاهده شماره‌ها
+            <span aria-hidden="true">←</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="popular-professors-section" aria-labelledby="popular-professors-title">
+      <div class="container">
+
+        <div class="section-heading section-heading-inline">
+          <div>
+            <span class="section-eyebrow">تجربه دانشجویان</span>
+            <h2 id="popular-professors-title">استادهای محبوب</h2>
+            <p>استادهایی که در پارسورا بیشتر مورد توجه قرار گرفته‌اند.</p>
+          </div>
+          <a href="professors.html" class="section-more-link">
+            مشاهده همه استادها
+            <span aria-hidden="true">←</span>
+          </a>
+        </div>
+
+        <div class="professor-grid" id="index-professor-grid"></div>
+
+        <div class="carousel-controls" aria-label="کنترل استادهای محبوب">
+          <button type="button" class="carousel-button carousel-button-prev" aria-label="استادهای قبلی">←</button>
+          <div class="carousel-dots" aria-label="موقعیت در فهرست استادها">
+            <button type="button" class="carousel-dot active" aria-label="صفحه اول"></button>
+            <button type="button" class="carousel-dot" aria-label="صفحه دوم"></button>
+            <button type="button" class="carousel-dot" aria-label="صفحه سوم"></button>
+          </div>
+          <button type="button" class="carousel-button carousel-button-next" aria-label="استادهای بعدی">→</button>
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+    <section class="cta-section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-card">
+
+          <div class="cta-content">
+            <span class="cta-eyebrow">یک جای ساده برای پیدا کردن اطلاعات</span>
+            <h2 id="cta-title">دنبال یک استاد یا درس می‌گردی؟</h2>
+            <p>جستجو کن و اطلاعات موردنیازت را سریع‌تر پیدا کن.</p>
+          </div>
+
+          <a href="search.html" class="cta-button">شروع جستجو</a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <a href="index.html" class="footer-brand-link">
+          <img src="images/parsoora-logo.png" alt="لوگوی پارسورا" class="footer-logo">
+          <span class="footer-brand-name">پارسورا</span>
+        </a>
+        <p>همراه دانشجویان برای پیدا کردن اطلاعات استادها و درس‌ها.</p>
+      </div>
+
+      <div class="footer-column">
+        <h2>دسترسی سریع</h2>
+        <ul>
+          <li><a href="index.html">خانه</a></li>
+          <li><a href="professors.html">استادها</a></li>
+          <li><a href="Courses.html">درس‌ها</a></li>
+          <li><a href="reviews.html">تجربه دانشجویان</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h2>پارسورا</h2>
+        <ul>
+          <li><a href="about.html">درباره ما</a></li>
+          <li><a href="contact.html">ارتباط با ما</a></li>
+          <li><a href="rules.html">قوانین و شرایط</a></li>
+          <li><a href="privacy.html">حریم خصوصی</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h2>جستجو</h2>
+        <p>برای پیدا کردن استاد یا درس از جستجوی پارسورا استفاده کن.</p>
+        <a href="search.html" class="footer-search-link">
+          رفتن به جستجو
+          <span aria-hidden="true">←</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© ۱۴۰۵ پارسورا. تمامی حقوق محفوظ است.</p>
+    </div>
+  </footer>
+
+
+  <script src="data.js"></script>
+  <script src="Script.js"></script>
+
+</body>
+</html>
