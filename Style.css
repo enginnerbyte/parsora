@@ -5135,3 +5135,22 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
     justify-content: center;
   }
 }
+/* =========================================================
+   نمایش دکمه‌ی تم روی موبایل
+   ========================================================= */
+@media (max-width: 768px) {
+  /* header-actions رو نمایان کن */
+  .site-header .header-actions {
+    display: flex;
+  }
+
+  /* ولی فقط دکمه‌ی تم رو نشون بده (بقیه مخفی بمونن) */
+  .site-header:not(.nav-open) .header-actions > *:not(.theme-toggle) {
+    display: none;
+  }
+
+  /* وقتی منو بازه، همه‌ی آیتم‌ها نمایش داده بشن */
+  .site-header.nav-open .header-actions > * {
+    display: flex;
+  }
+}
