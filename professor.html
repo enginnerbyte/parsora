@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>پروفایل استاد | پارسورا</title>
+  <meta name="description" content="پروفایل استاد دانشگاه خوراسگان همراه با کلاس‌ها و نظرات دانشجویان">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +36,7 @@
       </nav>
 
       <div class="header-actions">
+        <button type="button" class="theme-toggle" aria-label="تغییر حالت نمایش">🌙</button>
         <a href="login.html" class="header-login">ورود</a>
         <a href="register.html" class="header-register">ثبت‌نام</a>
       </div>
@@ -51,6 +53,7 @@
 
   <main>
 
+    <!-- ========== Professor Profile Hero ========== -->
     <section class="professor-profile-hero">
       <div class="container">
 
@@ -60,25 +63,61 @@
         </a>
 
         <div class="professor-profile-card">
+
           <div class="professor-profile-avatar" aria-hidden="true">👤</div>
 
           <div class="professor-profile-info">
-  <span class="professor-profile-label">پروفایل استاد</span>
-  <h1 id="professor-name">در حال بارگذاری…</h1>
-  <p id="professor-field" class="professor-profile-field">—</p>
+            <span class="professor-profile-label">پروفایل استاد</span>
+            <h1 id="professor-name">در حال بارگذاری…</h1>
+            <p id="professor-field" class="professor-profile-field">—</p>
 
-  <button type="button" class="professor-profile-save-btn" id="professor-profile-save-btn" hidden>
-    <span class="save-icon" aria-hidden="true">＋</span>
-    <span class="save-label">ذخیره استاد</span>
-  </button>
-</div>
+            <button type="button" class="professor-profile-save-btn" id="professor-profile-save-btn" hidden>
+              <span class="save-icon" aria-hidden="true">＋</span>
+              <span class="save-label">ذخیره استاد</span>
+            </button>
+          </div>
+
         </div>
 
       </div>
     </section>
 
+        <!-- ========== درباره استاد ========== -->
+    <section class="professor-about-section" id="professor-about-section" hidden>
+      <div class="container">
+        <div class="professor-about-card">
+          <div class="professor-about-header">
+            <div class="professor-about-icon" aria-hidden="true">📋</div>
+            <h2>درباره استاد</h2>
+          </div>
+          <p class="professor-about-text" id="professor-about-text"></p>
+        </div>
+      </div>
+    </section>
 
-    <section class="professor-courses-section">
+
+    <!-- ========== Tabs ========== -->
+    <section class="profile-tabs-section">
+      <div class="container">
+        <div class="profile-tabs" role="tablist" aria-label="بخش‌های پروفایل">
+
+          <button type="button" class="profile-tab active" data-tab="courses" role="tab" aria-selected="true" aria-controls="panel-courses" id="tab-courses">
+            <span aria-hidden="true">📚</span>
+            درس‌ها و کلاس‌ها
+          </button>
+
+          <button type="button" class="profile-tab" data-tab="reviews" role="tab" aria-selected="false" aria-controls="panel-reviews" id="tab-reviews">
+            <span aria-hidden="true">💬</span>
+            نظرات دانشجوها
+          </button>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========== Panel: Courses ========== -->
+    <section class="professor-courses-section profile-panel" id="panel-courses" role="tabpanel" aria-labelledby="tab-courses">
       <div class="container">
 
         <div class="section-heading section-heading-inline">
@@ -87,13 +126,102 @@
             <h2>درس‌ها و کلاس‌ها</h2>
             <p>همه‌ی سکشن‌هایی که این استاد در ترم جاری تدریس می‌کند.</p>
           </div>
+          <a href="professors.html" class="section-more-link">
+            مشاهده همه استادها
+            <span aria-hidden="true">←</span>
+          </a>
         </div>
 
-        <div class="courses-full-grid" id="professor-courses-grid"></div>
+        <div class="courses-full-grid" id="professor-courses-grid">
+          <!-- کارت‌های درس به صورت داینامیک توسط JavaScript اضافه می‌شن -->
+        </div>
 
-        <p id="professor-courses-empty" class="filters-results-count" hidden>
-          این استاد در ترم جاری کلاسی ندارد.
-        </p>
+        <div class="filters-empty-state" id="professor-courses-empty" hidden>
+          <div class="filters-empty-icon" aria-hidden="true">📚</div>
+          <h2>کلاسی وجود ندارد</h2>
+          <p>این استاد در ترم جاری کلاسی ندارد.</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========== Panel: Reviews ========== -->
+    <section class="professor-reviews-section profile-panel" id="panel-reviews" role="tabpanel" aria-labelledby="tab-reviews" hidden>
+      <div class="container">
+
+        <!-- خلاصه امتیاز -->
+        <div class="reviews-summary-card">
+          <div class="reviews-summary-block">
+            <span class="reviews-summary-number" id="reviews-average">۴.۷</span>
+            <div class="reviews-summary-stars" aria-hidden="true">⭐⭐⭐⭐⭐</div>
+            <span class="reviews-summary-count" id="reviews-count">بر اساس ۳ نظر</span>
+          </div>
+
+          <div class="reviews-summary-divider" aria-hidden="true"></div>
+
+          <div class="reviews-summary-cta">
+            <p>نظرت رو با بقیه‌ی دانشجوها به اشتراک بذار</p>
+            <button type="button" class="reviews-add-btn" id="reviews-add-btn">
+              <span aria-hidden="true">✏️</span>
+              ثبت نظر جدید
+            </button>
+          </div>
+        </div>
+
+
+        <!-- فرم ثبت نظر (مخفی تا کلیک) -->
+        <form class="review-form" id="review-form" hidden>
+          <div class="review-form-header">
+            <h3>نظر خودت را بنویس</h3>
+            <button type="button" class="review-form-close" id="review-form-close" aria-label="بستن فرم">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+
+          <div class="review-form-group">
+            <label class="review-form-label" for="review-name">نام و نام خانوادگی</label>
+            <input class="review-form-input" id="review-name" type="text" placeholder="مثلاً علی محمدی" required>
+          </div>
+
+          <div class="review-form-group">
+            <label class="review-form-label">امتیاز شما</label>
+            <div class="review-form-stars" id="review-form-stars" role="radiogroup" aria-label="امتیاز">
+              <button type="button" class="review-star" data-value="1" aria-label="۱ ستاره">★</button>
+              <button type="button" class="review-star" data-value="2" aria-label="۲ ستاره">★</button>
+              <button type="button" class="review-star" data-value="3" aria-label="۳ ستاره">★</button>
+              <button type="button" class="review-star" data-value="4" aria-label="۴ ستاره">★</button>
+              <button type="button" class="review-star" data-value="5" aria-label="۵ ستاره">★</button>
+            </div>
+            <span class="review-form-stars-hint" id="review-stars-hint">روی ستاره‌ها کلیک کن</span>
+          </div>
+
+          <div class="review-form-group">
+            <label class="review-form-label" for="review-text">تجربه‌ات از این استاد</label>
+            <textarea class="review-form-textarea" id="review-text" placeholder="مثلاً: استاد خیلی خوبی هستن، تدریسشون واضح و امتحان‌هاشون منصفانه‌ست..." rows="5" required></textarea>
+          </div>
+
+          <div class="review-form-actions">
+            <button type="submit" class="review-form-submit">
+              <span aria-hidden="true">✓</span>
+              ثبت نظر
+            </button>
+            <button type="button" class="review-form-cancel" id="review-form-cancel">
+              انصراف
+            </button>
+          </div>
+
+          <p class="review-form-note">
+            <span aria-hidden="true">ℹ️</span>
+            نظر شما پس از تأیید توسط تیم پارسورا منتشر می‌شود.
+          </p>
+        </form>
+
+
+        <!-- لیست نظرات -->
+        <div class="reviews-list" id="reviews-list">
+          <!-- کارت‌های نظر به صورت داینامیک اضافه می‌شن -->
+        </div>
 
       </div>
     </section>
@@ -121,7 +249,8 @@
           <li><a href="reviews.html">تجربه دانشجویان</a></li>
         </ul>
       </div>
-<div class="footer-column">
+
+      <div class="footer-column">
         <h2>پارسورا</h2>
         <ul>
           <li><a href="about.html">درباره ما</a></li>
@@ -147,7 +276,7 @@
     </div>
   </footer>
 
-
+  <script src="bios.js"></script>
   <script src="data.js"></script>
   <script src="Script.js"></script>
 

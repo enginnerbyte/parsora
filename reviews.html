@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>تجربه دانشجویان | پارسورا</title>
+  <meta name="description" content="تجربه‌های واقعی دانشجویان دانشگاه خوراسگان از کلاس‌ها و اساتید — ثبت‌شده توسط خود دانشجوها">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +36,7 @@
       </nav>
 
       <div class="header-actions">
+        <button type="button" class="theme-toggle" aria-label="تغییر حالت نمایش">🌙</button>
         <a href="login.html" class="header-login">ورود</a>
         <a href="register.html" class="header-register">ثبت‌نام</a>
       </div>
@@ -51,6 +53,7 @@
 
   <main>
 
+    <!-- ========== Page Hero ========== -->
     <section class="page-hero" aria-labelledby="page-title">
       <div class="container">
         <span class="page-hero-eyebrow">تجربه دانشجویان</span>
@@ -65,6 +68,7 @@
     </section>
 
 
+    <!-- ========== Reviews Listing ========== -->
     <section class="reviews-listing-section" aria-label="فهرست نظرات">
       <div class="container">
 
@@ -76,10 +80,17 @@
             اولین نفری باش که تجربه‌اش رو با بقیه‌ی دانشجوها به اشتراک می‌ذاره.
             با ثبت تجربه‌ات، به بقیه کمک می‌کنی انتخاب بهتری داشته باشن.
           </p>
-          <a href="login.html" class="reviews-empty-btn">
-            <span aria-hidden="true">✏️</span>
-            اولین تجربه را بنویس
-          </a>
+
+          <div class="reviews-empty-actions">
+            <a href="login.html" class="reviews-empty-btn">
+              <span aria-hidden="true">✏️</span>
+              اولین تجربه را بنویس
+            </a>
+            <a href="professors.html" class="reviews-empty-btn reviews-empty-btn-secondary">
+              <span aria-hidden="true">👨‍🏫</span>
+              مشاهده استادها
+            </a>
+          </div>
         </div>
 
         <!-- گرید نظرات (وقتی نظر واقعی اضافه شد، این نمایش داده می‌شه) -->
@@ -111,7 +122,8 @@
           <li><a href="reviews.html">تجربه دانشجویان</a></li>
         </ul>
       </div>
-<div class="footer-column">
+
+      <div class="footer-column">
         <h2>پارسورا</h2>
         <ul>
           <li><a href="about.html">درباره ما</a></li>

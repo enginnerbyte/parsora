@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ثبت‌نام | پارسورا</title>
+  <meta name="description" content="ثبت‌نام در پارسورا — تجربه‌ات را با دانشجویان دیگر به اشتراک بگذار">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +36,7 @@
       </nav>
 
       <div class="header-actions">
+        <button type="button" class="theme-toggle" aria-label="تغییر حالت نمایش">🌙</button>
         <a href="login.html" class="header-login">ورود</a>
         <a href="register.html" class="header-register">ثبت‌نام</a>
       </div>
@@ -51,6 +53,7 @@
 
   <main>
 
+    <!-- ========== Page Hero ========== -->
     <section class="page-hero" aria-labelledby="page-title">
       <div class="container">
         <span class="page-hero-eyebrow">به پارسورا خوش آمدی</span>
@@ -60,6 +63,7 @@
     </section>
 
 
+    <!-- ========== Auth Card ========== -->
     <section class="auth-section">
       <div class="container">
 
@@ -95,7 +99,7 @@
 
             <div class="form-group">
               <label class="form-label" for="register-department">گروه آموزشی</label>
-<select class="form-select" id="register-department" name="department">
+              <select class="form-select" id="register-department" name="department">
                 <option value="">انتخاب کن...</option>
                 <option value="کامپیوتر">مهندسی کامپیوتر</option>
                 <option value="برق">مهندسی برق</option>
@@ -140,7 +144,7 @@
 
 
   <!-- =========================================================
-       مودال قوانین و شرایط (موقع ثبت‌نام)
+       مودال قوانین و شرایط
        ========================================================= -->
   <div class="terms-modal-overlay" id="terms-modal-overlay" hidden>
     <div class="terms-modal" role="dialog" aria-modal="true" aria-labelledby="terms-modal-title">
@@ -204,7 +208,8 @@
           </div>
 
         </div>
-<a href="rules.html" target="_blank" rel="noopener noreferrer" class="terms-modal-full-link">
+
+        <a href="rules.html" target="_blank" rel="noopener noreferrer" class="terms-modal-full-link">
           <span aria-hidden="true">📖</span>
           خواندن متن کامل قوانین
           <span aria-hidden="true">←</span>

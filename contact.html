@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>شماره‌های تماس | پارسورا</title>
+  <meta name="description" content="شماره‌های تماس و داخلی‌های دانشکده فنی و مهندسی دانشگاه خوراسگان — همه در یک جا">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +36,7 @@
       </nav>
 
       <div class="header-actions">
+        <button type="button" class="theme-toggle" aria-label="تغییر حالت نمایش">🌙</button>
         <a href="login.html" class="header-login">ورود</a>
         <a href="register.html" class="header-register">ثبت‌نام</a>
       </div>
@@ -51,6 +53,7 @@
 
   <main>
 
+    <!-- ========== Page Hero ========== -->
     <section class="page-hero" aria-labelledby="page-title">
       <div class="container">
         <span class="page-hero-eyebrow">شماره‌های ضروری</span>
@@ -60,9 +63,11 @@
     </section>
 
 
+    <!-- ========== Contacts ========== -->
     <section class="contacts-section">
       <div class="container">
 
+        <!-- Note -->
         <div class="contacts-note">
           <span class="contacts-note-icon" aria-hidden="true">ℹ️</span>
           <p>
@@ -71,6 +76,7 @@
           </p>
         </div>
 
+        <!-- Search -->
         <form class="contacts-search-bar" role="search" id="contacts-search-form">
           <label class="sr-only" for="contact-search">جستجوی شماره</label>
           <div class="filter-search">
@@ -79,13 +85,16 @@
           </div>
         </form>
 
+        <!-- Results Count -->
         <p class="filters-results-count" id="contacts-results-count">
           <strong id="contacts-results-number">۸</strong> شماره پیدا شد
         </p>
 
 
+        <!-- Contacts Grid -->
         <div class="contacts-grid" id="contacts-grid">
 
+          <!-- 1. امامی علیرضا -->
           <article class="contact-card" data-search="امامی علیرضا مدیرگروه عمران 2332 03135002332">
             <div class="contact-card-header">
               <div class="contact-avatar" aria-hidden="true">👤</div>
@@ -101,7 +110,7 @@
             <div class="contact-numbers">
               <div class="contact-number-row">
                 <span class="contact-number-label">داخلی</span>
-<span class="contact-number-value">۲۳۳۲</span>
+                <span class="contact-number-value">۲۳۳۲</span>
                 <button type="button" class="contact-copy-btn" aria-label="کپی شماره داخلی" data-copy-btn="2332">
                   <span aria-hidden="true">📋</span>
                 </button>
@@ -117,6 +126,7 @@
           </article>
 
 
+          <!-- 2. امیری اسماعیل -->
           <article class="contact-card" data-search="امیری اسماعیل دفتر ریاست دانشکده 2378 03135002378">
             <div class="contact-card-header">
               <div class="contact-avatar" aria-hidden="true">👤</div>
@@ -148,6 +158,7 @@
           </article>
 
 
+          <!-- 3. ثقفی اصفهانی هادی -->
           <article class="contact-card" data-search="ثقفی اصفهانی هادی معاون آموزش پژوهشی دانشکده فنی مهندسی 2615 03135002615">
             <div class="contact-card-header">
               <div class="contact-avatar" aria-hidden="true">👤</div>
@@ -179,10 +190,11 @@
           </article>
 
 
+          <!-- 4. دفتر مجله -->
           <article class="contact-card" data-search="دفتر مجله 2686 03135002686">
             <div class="contact-card-header">
               <div class="contact-avatar" aria-hidden="true">📖</div>
-<div class="contact-card-info">
+              <div class="contact-card-info">
                 <h2 class="contact-name">دفتر مجله</h2>
                 <span class="contact-role">دفتر مجله</span>
               </div>
@@ -210,6 +222,7 @@
           </article>
 
 
+          <!-- 5. زارعی سیدعلیرضا -->
           <article class="contact-card" data-search="زارعی سیدعلیرضا ریاست دانشکده فنی مهندسی 2700 03135002700">
             <div class="contact-card-header">
               <div class="contact-avatar" aria-hidden="true">👤</div>
@@ -241,6 +254,7 @@
           </article>
 
 
+          <!-- 6. زمانی فر مهدی -->
           <article class="contact-card" data-search="زمانی فر مهدی خدمات 2363 03135002363">
             <div class="contact-card-header">
               <div class="contact-avatar" aria-hidden="true">👤</div>
@@ -264,7 +278,7 @@
               <div class="contact-number-row">
                 <span class="contact-number-label">مستقیم</span>
                 <span class="contact-number-value">۰۳۱۳۵۰۰۲۳۶۳</span>
-<button type="button" class="contact-copy-btn" aria-label="کپی شماره مستقیم" data-copy-btn="03135002363">
+                <button type="button" class="contact-copy-btn" aria-label="کپی شماره مستقیم" data-copy-btn="03135002363">
                   <span aria-hidden="true">📋</span>
                 </button>
               </div>
@@ -272,6 +286,7 @@
           </article>
 
 
+          <!-- 7. ساعدی محمود -->
           <article class="contact-card" data-search="ساعدی محمود خدمات طبقه همکف 2678 03135002678">
             <div class="contact-card-header">
               <div class="contact-avatar" aria-hidden="true">👤</div>
@@ -303,6 +318,7 @@
           </article>
 
 
+          <!-- 8. ستایش رعنا -->
           <article class="contact-card" data-search="ستایش رعنا مسئول امور پژوهشی برنامه های علمی 2567 03135002567">
             <div class="contact-card-header">
               <div class="contact-avatar" aria-hidden="true">👤</div>
@@ -335,6 +351,7 @@
 
         </div>
 
+        <!-- Empty State -->
         <p id="contacts-empty-state" class="filters-results-count" hidden>
           هیچ شماره‌ای با این مشخصات پیدا نشد.
         </p>
@@ -357,7 +374,7 @@
       </div>
 
       <div class="footer-column">
-<h2>دسترسی سریع</h2>
+        <h2>دسترسی سریع</h2>
         <ul>
           <li><a href="index.html">خانه</a></li>
           <li><a href="professors.html">استادها</a></li>

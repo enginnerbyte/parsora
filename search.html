@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>جستجو | پارسورا</title>
+  <meta name="description" content="جستجوی استاد، درس یا کد درس در دانشگاه خوراسگان">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +36,7 @@
       </nav>
 
       <div class="header-actions">
+        <button type="button" class="theme-toggle" aria-label="تغییر حالت نمایش">🌙</button>
         <a href="login.html" class="header-login">ورود</a>
         <a href="register.html" class="header-register">ثبت‌نام</a>
       </div>
@@ -51,6 +53,7 @@
 
   <main>
 
+    <!-- ========== Search Hero ========== -->
     <section class="page-hero" aria-labelledby="page-title">
       <div class="container">
         <span class="page-hero-eyebrow">جستجو در پارسورا</span>
@@ -66,9 +69,11 @@
     </section>
 
 
+    <!-- ========== Search Results ========== -->
     <section class="search-results-section">
       <div class="container">
 
+        <!-- Tabs -->
         <div class="search-tabs" role="tablist" aria-label="دسته‌بندی نتایج">
           <button type="button" class="search-tab active" id="tab-professors" role="tab" aria-selected="true">
             استادها <span class="search-tab-count" id="tab-count-professors">۰</span>
@@ -78,22 +83,31 @@
           </button>
         </div>
 
+        <!-- Summary -->
         <p class="search-summary" id="search-summary" hidden></p>
 
-        <div id="results-professors" role="tabpanel">
-          <div class="professors-full-grid" id="search-professors-grid"></div>
+        <!-- Professors Results -->
+        <div id="results-professors" role="tabpanel" aria-labelledby="tab-professors">
+          <div class="professors-full-grid" id="search-professors-grid">
+            <!-- کارت‌های استاد به صورت داینامیک توسط JavaScript اضافه می‌شن -->
+          </div>
         </div>
 
-        <div id="results-courses" role="tabpanel" hidden>
-          <div class="courses-full-grid" id="search-courses-grid"></div>
+        <!-- Courses Results -->
+        <div id="results-courses" role="tabpanel" aria-labelledby="tab-courses" hidden>
+          <div class="courses-full-grid" id="search-courses-grid">
+            <!-- کارت‌های درس به صورت داینامیک توسط JavaScript اضافه می‌شن -->
+          </div>
         </div>
 
+        <!-- Empty State -->
         <div class="search-empty" id="search-empty" hidden>
           <span class="search-empty-icon" aria-hidden="true">🔍</span>
           <h2>چیزی پیدا نشد</h2>
           <p>با عبارت دیگری امتحان کن یا املای کلمه را بررسی کن.</p>
         </div>
 
+        <!-- Hint -->
         <div class="search-hint" id="search-hint">
           💡 یک نام یا کلمه بنویس تا نتایج همین‌جا نمایش داده شود.
         </div>
@@ -106,7 +120,8 @@
 
   <footer class="site-footer">
     <div class="container footer-grid">
-<div class="footer-brand">
+
+      <div class="footer-brand">
         <a href="index.html" class="footer-brand-link">
           <img src="images/parsoora-logo.png" alt="لوگوی پارسورا" class="footer-logo">
           <span class="footer-brand-name">پارسورا</span>

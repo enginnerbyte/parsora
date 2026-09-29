@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>پروفایل درس | پارسورا</title>
+  <meta name="description" content="پروفایل درس دانشگاه خوراسگان همراه با لیست استادها، زمان‌ها و محل برگزاری">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +36,7 @@
       </nav>
 
       <div class="header-actions">
+        <button type="button" class="theme-toggle" aria-label="تغییر حالت نمایش">🌙</button>
         <a href="login.html" class="header-login">ورود</a>
         <a href="register.html" class="header-register">ثبت‌نام</a>
       </div>
@@ -51,6 +53,7 @@
 
   <main>
 
+    <!-- ========== Course Profile Hero ========== -->
     <section class="professor-profile-hero">
       <div class="container">
 
@@ -60,6 +63,7 @@
         </a>
 
         <div class="professor-profile-card">
+
           <div class="professor-profile-avatar" aria-hidden="true">📚</div>
 
           <div class="professor-profile-info">
@@ -67,12 +71,14 @@
             <h1 id="course-name">در حال بارگذاری…</h1>
             <p id="course-code" class="professor-profile-field">—</p>
           </div>
+
         </div>
 
       </div>
     </section>
 
 
+    <!-- ========== Course Sections ========== -->
     <section class="professor-courses-section">
       <div class="container">
 
@@ -82,13 +88,21 @@
             <h2>استادها و زمان‌ها</h2>
             <p>همه‌ی سکشن‌های این درس در ترم جاری.</p>
           </div>
+          <a href="Courses.html" class="section-more-link">
+            مشاهده همه درس‌ها
+            <span aria-hidden="true">←</span>
+          </a>
         </div>
 
-        <div class="courses-full-grid" id="course-sections-grid"></div>
+        <div class="courses-full-grid" id="course-sections-grid">
+          <!-- کارت‌های سکشن به صورت داینامیک توسط JavaScript اضافه می‌شن -->
+        </div>
 
-        <p id="course-sections-empty" class="filters-results-count" hidden>
-          درسی با این مشخصات پیدا نشد.
-        </p>
+        <div class="filters-empty-state" id="course-sections-empty" hidden>
+          <div class="filters-empty-icon" aria-hidden="true">📚</div>
+          <h2>درسی پیدا نشد</h2>
+          <p>با این مشخصات درسی وجود ندارد.</p>
+        </div>
 
       </div>
     </section>
@@ -116,7 +130,8 @@
           <li><a href="reviews.html">تجربه دانشجویان</a></li>
         </ul>
       </div>
-<div class="footer-column">
+
+      <div class="footer-column">
         <h2>پارسورا</h2>
         <ul>
           <li><a href="about.html">درباره ما</a></li>

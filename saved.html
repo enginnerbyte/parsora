@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ذخیره‌شده‌ها | پارسورا</title>
+  <title>استادهای ذخیره‌شده | پارسورا</title>
+  <meta name="description" content="استادهای ذخیره‌شده در پارسورا — همه در یک جا برای مقایسه و انتخاب سریع‌تر">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +36,8 @@
       </nav>
 
       <div class="header-actions">
-        <a href="saved.html" class="header-saved active" aria-label="ذخیره‌شده‌ها">
+        <button type="button" class="theme-toggle" aria-label="تغییر حالت نمایش">🌙</button>
+        <a href="saved.html" class="header-saved active" aria-label="استادهای ذخیره‌شده">
           <span aria-hidden="true">🔖</span>
           <span>ذخیره‌شده‌ها</span>
           <span class="saved-badge" id="saved-count-badge">۰</span>
@@ -56,21 +58,24 @@
 
   <main>
 
+    <!-- ========== Page Hero ========== -->
     <section class="page-hero" aria-labelledby="page-title">
       <div class="container">
         <span class="page-hero-eyebrow">لیست شخصی تو</span>
-        <h1 id="page-title">ذخیره‌شده‌ها</h1>
-        <p>استادها و درس‌هایی که ذخیره کردی، همه یه جا. برای مقایسه یا انتخاب سریع‌تر.</p>
+        <h1 id="page-title">استادهای ذخیره‌شده</h1>
+        <p>استادهایی که ذخیره کردی، همه یه جا. برای مقایسه یا انتخاب سریع‌تر.</p>
       </div>
     </section>
 
 
-    <section class="saved-listing-section" aria-label="فهرست ذخیره‌شده‌ها">
+    <!-- ========== Saved Listing ========== -->
+    <section class="saved-listing-section" aria-label="فهرست استادهای ذخیره‌شده">
       <div class="container">
 
+        <!-- Header -->
         <div class="saved-header">
           <p class="filters-results-count">
-            <strong id="saved-results-number">۰</strong> مورد ذخیره شده
+            <strong id="saved-results-number">۰</strong> استاد ذخیره شده
           </p>
 
           <button type="button" class="saved-clear-btn" id="saved-clear-btn" hidden>
@@ -79,33 +84,44 @@
           </button>
         </div>
 
+        <!-- Professors Group -->
         <div class="saved-group" id="saved-professors-group">
           <h2 class="saved-group-title">
             <span aria-hidden="true">👨‍🏫</span>
             استادهای ذخیره‌شده
           </h2>
-          <div class="professors-full-grid" id="saved-professors-grid"></div>
+          <div class="professors-full-grid" id="saved-professors-grid">
+            <!-- کارت‌های استاد به صورت داینامیک توسط JavaScript اضافه می‌شن -->
+          </div>
         </div>
 
-      
+        <!-- Empty State -->
         <div class="saved-empty-state" id="saved-empty-state">
           <div class="saved-empty-icon" aria-hidden="true">🔖</div>
-          <h2>هنوز چیزی ذخیره نکردی</h2>
+          <h2>هنوز استادی ذخیره نکردی</h2>
           <p>
-            وقتی استادی یا درسی رو توی سایت می‌بینی و می‌خوای بعداً سریع پیداش کنی،
+            وقتی استادی رو توی سایت می‌بینی و می‌خوای بعداً سریع پیداش کنی،
             دکمه‌ی <strong>＋</strong> رو بزن. اینجا نشون داده می‌شه.
           </p>
-          <a href="professors.html" class="saved-empty-btn">
-            <span aria-hidden="true">👨‍🏫</span>
-            مشاهده استادها
-          </a>
+          <div class="saved-empty-actions">
+            <a href="professors.html" class="saved-empty-btn">
+              <span aria-hidden="true">👨‍🏫</span>
+              مشاهده استادها
+            </a>
+            <a href="saved-courses.html" class="saved-empty-btn saved-empty-btn-secondary">
+              <span aria-hidden="true">📚</span>
+              درس‌های ذخیره‌شده
+            </a>
+          </div>
         </div>
 
       </div>
     </section>
 
   </main>
-<footer class="site-footer">
+
+
+  <footer class="site-footer">
     <div class="container footer-grid">
 
       <div class="footer-brand">

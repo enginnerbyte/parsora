@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>درس‌های ذخیره‌شده | پارسورا</title>
+  <meta name="description" content="درس‌های ذخیره‌شده در پارسورا — همه در یک جا برای مقایسه و انتخاب سریع‌تر">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +36,7 @@
       </nav>
 
       <div class="header-actions">
+        <button type="button" class="theme-toggle" aria-label="تغییر حالت نمایش">🌙</button>
         <a href="saved-courses.html" class="header-saved active" aria-label="درس‌های ذخیره‌شده">
           <span aria-hidden="true">📚</span>
           <span>درس‌های ذخیره‌شده</span>
@@ -56,6 +58,7 @@
 
   <main>
 
+    <!-- ========== Page Hero ========== -->
     <section class="page-hero" aria-labelledby="page-title">
       <div class="container">
         <span class="page-hero-eyebrow">لیست شخصی تو</span>
@@ -65,9 +68,11 @@
     </section>
 
 
+    <!-- ========== Saved Courses Listing ========== -->
     <section class="saved-listing-section" aria-label="فهرست درس‌های ذخیره‌شده">
       <div class="container">
 
+        <!-- Header -->
         <div class="saved-header">
           <p class="filters-results-count">
             <strong id="saved-results-number">۰</strong> درس ذخیره شده
@@ -79,8 +84,12 @@
           </button>
         </div>
 
-        <div class="courses-full-grid" id="saved-courses-grid"></div>
+        <!-- Courses Grid -->
+        <div class="courses-full-grid" id="saved-courses-grid">
+          <!-- کارت‌های درس به صورت داینامیک توسط JavaScript اضافه می‌شن -->
+        </div>
 
+        <!-- Empty State -->
         <div class="saved-empty-state" id="saved-empty-state">
           <div class="saved-empty-icon" aria-hidden="true">📚</div>
           <h2>هنوز درسی ذخیره نکردی</h2>
@@ -88,10 +97,16 @@
             وقتی درسی رو توی صفحه‌ی درس‌ها می‌بینی و می‌خوای بعداً سریع پیداش کنی،
             دکمه‌ی <strong>＋</strong> رو بزن. اینجا نشون داده می‌شه.
           </p>
-          <a href="Courses.html" class="saved-empty-btn">
-            <span aria-hidden="true">📚</span>
-            مشاهده درس‌ها
-          </a>
+          <div class="saved-empty-actions">
+            <a href="Courses.html" class="saved-empty-btn">
+              <span aria-hidden="true">📚</span>
+              مشاهده درس‌ها
+            </a>
+            <a href="saved.html" class="saved-empty-btn saved-empty-btn-secondary">
+              <span aria-hidden="true">🔖</span>
+              استادهای ذخیره‌شده
+            </a>
+          </div>
         </div>
 
       </div>
@@ -110,7 +125,8 @@
         </a>
         <p>همراه دانشجویان برای پیدا کردن اطلاعات استادها و درس‌ها.</p>
       </div>
-<div class="footer-column">
+
+      <div class="footer-column">
         <h2>دسترسی سریع</h2>
         <ul>
           <li><a href="index.html">خانه</a></li>

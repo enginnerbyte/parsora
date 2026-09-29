@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>صفحه پیدا نشد | پارسورا</title>
+  <meta name="description" content="این صفحه در پارسورا پیدا نشد. راه برگشت به خانه یا جستجو در پارسورا">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +36,7 @@
       </nav>
 
       <div class="header-actions">
+        <button type="button" class="theme-toggle" aria-label="تغییر حالت نمایش">🌙</button>
         <a href="login.html" class="header-login">ورود</a>
         <a href="register.html" class="header-register">ثبت‌نام</a>
       </div>
@@ -51,9 +53,11 @@
 
   <main>
 
+    <!-- ========== Error Section ========== -->
     <section class="error-section" aria-labelledby="error-title">
       <div class="container">
 
+        <!-- Error Scene (۴۰۴ با کاراکترهای شنا) -->
         <div class="error-scene" aria-hidden="true">
 
           <div class="error-blob error-blob-1"></div>
@@ -77,6 +81,7 @@
 
         </div>
 
+        <!-- Error Content -->
         <div class="error-content">
           <span class="error-eyebrow">خطای ۴۰۴</span>
           <h1 id="error-title">این صفحه پیدا نشد</h1>
@@ -85,6 +90,7 @@
             ولی نگران نباش — راه برگشت همیشه بازه.
           </p>
 
+          <!-- Actions -->
           <div class="error-actions">
             <a href="index.html" class="error-btn error-btn-primary">
               <span aria-hidden="true">🏠</span>
@@ -96,6 +102,7 @@
             </a>
           </div>
 
+          <!-- Quick Links -->
           <div class="error-links">
             <span>یا سری بزن به:</span>
             <a href="professors.html">استادها</a>
@@ -112,7 +119,8 @@
 
   <footer class="site-footer">
     <div class="container footer-grid">
-<div class="footer-brand">
+
+      <div class="footer-brand">
         <a href="index.html" class="footer-brand-link">
           <img src="images/parsoora-logo.png" alt="لوگوی پارسورا" class="footer-logo">
           <span class="footer-brand-name">پارسورا</span>

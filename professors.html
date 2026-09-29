@@ -1,9 +1,10 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>استادها | پارسورا</title>
+  <meta name="description" content="لیست اساتید دانشگاه خوراسگان همراه با امتیاز و تجربه دانشجویان">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +36,7 @@
       </nav>
 
       <div class="header-actions">
+        <button type="button" class="theme-toggle" aria-label="تغییر حالت نمایش">🌙</button>
         <a href="login.html" class="header-login">ورود</a>
         <a href="register.html" class="header-register">ثبت‌نام</a>
       </div>
@@ -51,17 +53,37 @@
 
   <main>
 
+    <!-- ========== Page Hero ========== -->
     <section class="page-hero" aria-labelledby="page-title">
       <div class="container">
         <span class="page-hero-eyebrow">تجربه دانشجویان</span>
         <h1 id="page-title">اساتید خوراسگان</h1>
         <p>استاد موردنظرت را پیدا کن و امتیاز و تجربه‌ی دانشجویان دیگر را ببین.</p>
+
+        <div class="page-hero-stats">
+          <div class="page-hero-stat">
+            <span class="page-hero-stat-value">۹۱</span>
+            <span class="page-hero-stat-label">استاد فعال</span>
+          </div>
+          <div class="page-hero-stat-divider" aria-hidden="true"></div>
+          <div class="page-hero-stat">
+            <span class="page-hero-stat-value">۵۳۷</span>
+            <span class="page-hero-stat-label">کلاس ترم جاری</span>
+          </div>
+          <div class="page-hero-stat-divider" aria-hidden="true"></div>
+          <div class="page-hero-stat">
+            <span class="page-hero-stat-value">۱۲</span>
+            <span class="page-hero-stat-label">گروه آموزشی</span>
+          </div>
+        </div>
       </div>
     </section>
 
 
-    <section class="filters-section">
+    <!-- ========== Filters ========== -->
+    <section class="filters-section" aria-label="فیلترها">
       <div class="container">
+
         <form class="filters-bar" id="professors-filter-form" role="search">
 
           <label class="sr-only" for="professor-search">جستجوی استاد</label>
@@ -86,29 +108,34 @@
 
         </form>
 
-      <div class="filters-results-row">
-  <p class="filters-results-count" id="professors-results-count">
-    <strong id="professors-results-number">۸</strong> استاد پیدا شد
-  </p>
-  <a href="saved.html" class="saved-link-btn">
-    <span aria-hidden="true">🔖</span>
-    <span>ذخیره‌شده‌ها</span>
-    <span class="saved-badge" id="saved-count-badge">۰</span>
-  </a>
-</div>
+        <div class="filters-results-row">
+          <p class="filters-results-count" id="professors-results-count">
+            <strong id="professors-results-number">۸</strong> استاد پیدا شد
+          </p>
+          <a href="saved.html" class="saved-link-btn">
+            <span aria-hidden="true">🔖</span>
+            <span>ذخیره‌شده‌ها</span>
+            <span class="saved-badge" id="saved-count-badge">۰</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
 
 
+    <!-- ========== Professors Listing ========== -->
     <section class="professors-listing-section" aria-label="فهرست استادها">
       <div class="container">
 
         <div class="professors-full-grid" id="professors-grid">
-
-         
+          <!-- کارت‌های استاد به صورت داینامیک توسط JavaScript اضافه می‌شن -->
         </div>
 
-        <p id="professors-empty-state" class="filters-results-count" hidden>
-          هیچ استادی با این مشخصات پیدا نشد.
-        </p>
+        <div class="filters-empty-state" id="professors-empty-state" hidden>
+          <div class="filters-empty-icon" aria-hidden="true">🔍</div>
+          <h2>استادی پیدا نشد</h2>
+          <p>با عبارت دیگری امتحان کن یا فیلترها را تغییر بده.</p>
+        </div>
 
         <nav class="pagination" id="professors-pagination" aria-label="صفحه‌بندی استادها"></nav>
 
@@ -138,7 +165,8 @@
           <li><a href="reviews.html">تجربه دانشجویان</a></li>
         </ul>
       </div>
- <div class="footer-column">
+
+      <div class="footer-column">
         <h2>پارسورا</h2>
         <ul>
           <li><a href="about.html">درباره ما</a></li>

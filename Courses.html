@@ -1,9 +1,10 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>درس‌ها | پارسورا</title>
+  <meta name="description" content="لیست دروس دانشگاه خوراسگان همراه با کد درس، استاد و زمان برگزاری">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +36,7 @@
       </nav>
 
       <div class="header-actions">
+        <button type="button" class="theme-toggle" aria-label="تغییر حالت نمایش">🌙</button>
         <a href="login.html" class="header-login">ورود</a>
         <a href="register.html" class="header-register">ثبت‌نام</a>
       </div>
@@ -51,17 +53,37 @@
 
   <main>
 
+    <!-- ========== Page Hero ========== -->
     <section class="page-hero" aria-labelledby="page-title">
       <div class="container">
         <span class="page-hero-eyebrow">اطلاعات دروس</span>
         <h1 id="page-title">درس‌های خوراسگان</h1>
         <p>نام درس، کد درس و گروه آموزشی مربوطه را پیدا کن.</p>
+
+        <div class="page-hero-stats">
+          <div class="page-hero-stat">
+            <span class="page-hero-stat-value">۵۳۷</span>
+            <span class="page-hero-stat-label">کلاس ترم جاری</span>
+          </div>
+          <div class="page-hero-stat-divider" aria-hidden="true"></div>
+          <div class="page-hero-stat">
+            <span class="page-hero-stat-value">۳</span>
+            <span class="page-hero-stat-label">گروه آموزشی</span>
+          </div>
+          <div class="page-hero-stat-divider" aria-hidden="true"></div>
+          <div class="page-hero-stat">
+            <span class="page-hero-stat-value">۹۱</span>
+            <span class="page-hero-stat-label">استاد فعال</span>
+          </div>
+        </div>
       </div>
     </section>
 
 
-    <section class="filters-section">
+    <!-- ========== Filters ========== -->
+    <section class="filters-section" aria-label="فیلترها">
       <div class="container">
+
         <form class="filters-bar" id="courses-filter-form" role="search">
 
           <label class="sr-only" for="course-search">جستجوی درس</label>
@@ -86,30 +108,34 @@
 
         </form>
 
-     <div class="filters-results-row">
-  <p class="filters-results-count" id="courses-results-count">
-    <strong id="courses-results-number">۹</strong> درس پیدا شد
-  </p>
-  <a href="saved-courses.html" class="saved-link-btn">
-    <span aria-hidden="true">🔖</span>
-    <span>درس‌های ذخیره‌شده</span>
-    <span class="saved-badge" id="saved-courses-count-badge">۰</span>
-  </a>
-</div>
+        <div class="filters-results-row">
+          <p class="filters-results-count" id="courses-results-count">
+            <strong id="courses-results-number">۹</strong> درس پیدا شد
+          </p>
+          <a href="saved-courses.html" class="saved-link-btn">
+            <span aria-hidden="true">🔖</span>
+            <span>درس‌های ذخیره‌شده</span>
+            <span class="saved-badge" id="saved-courses-count-badge">۰</span>
+          </a>
+        </div>
+
       </div>
     </section>
 
 
+    <!-- ========== Courses Listing ========== -->
     <section class="courses-listing-section" aria-label="فهرست درس‌ها">
       <div class="container">
 
         <div class="courses-full-grid" id="courses-grid">
-
+          <!-- کارت‌های درس به صورت داینامیک توسط JavaScript اضافه می‌شن -->
         </div>
 
-        <p id="courses-empty-state" class="filters-results-count" hidden>
-          هیچ درسی با این مشخصات پیدا نشد.
-        </p>
+        <div class="filters-empty-state" id="courses-empty-state" hidden>
+          <div class="filters-empty-icon" aria-hidden="true">📚</div>
+          <h2>درسی پیدا نشد</h2>
+          <p>با عبارت دیگری امتحان کن یا فیلترها را تغییر بده.</p>
+        </div>
 
         <nav class="pagination" id="courses-pagination" aria-label="صفحه‌بندی درس‌ها"></nav>
 

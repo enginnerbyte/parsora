@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>پارسورا | همراه دانشجویان</title>
+  <meta name="description" content="سایت اطلاعات اساتید و دروس دانشگاه خوراسگان">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +36,7 @@
       </nav>
 
       <div class="header-actions">
+        <button type="button" class="theme-toggle" aria-label="تغییر حالت نمایش">🌙</button>
         <a href="login.html" class="header-login">ورود</a>
         <a href="register.html" class="header-register">ثبت‌نام</a>
       </div>
@@ -51,6 +53,7 @@
 
   <main>
 
+    <!-- ========== Hero ========== -->
     <section class="hero-section" aria-labelledby="hero-title">
       <div class="container hero-grid">
 
@@ -75,6 +78,24 @@
           <div class="hero-quick-links" aria-label="دسترسی سریع">
             <a href="professors.html" class="quick-link">مشاهده استادها</a>
             <a href="Courses.html" class="quick-link">مشاهده درس‌ها</a>
+          </div>
+
+          <!-- بخش آمار جدید -->
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="hero-stat-number">۹۱</span>
+              <span class="hero-stat-label">استاد فعال</span>
+            </div>
+            <div class="hero-stat-divider" aria-hidden="true"></div>
+            <div class="hero-stat">
+              <span class="hero-stat-number">۵۳۷</span>
+              <span class="hero-stat-label">درس ترم جاری</span>
+            </div>
+            <div class="hero-stat-divider" aria-hidden="true"></div>
+            <div class="hero-stat">
+              <span class="hero-stat-number">۱۲</span>
+              <span class="hero-stat-label">گروه آموزشی</span>
+            </div>
           </div>
         </div>
 
@@ -103,7 +124,10 @@
 
       </div>
     </section>
-<section class="features-section" aria-labelledby="features-title">
+
+
+    <!-- ========== Features ========== -->
+    <section class="features-section" aria-labelledby="features-title">
       <div class="container">
         <div class="section-heading">
           <span class="section-eyebrow">دسترسی سریع</span>
@@ -143,6 +167,8 @@
       </div>
     </section>
 
+
+    <!-- ========== Contacts CTA ========== -->
     <section class="contacts-cta-section" aria-labelledby="contacts-cta-title">
       <div class="container">
         <div class="contacts-cta-card">
@@ -163,6 +189,8 @@
       </div>
     </section>
 
+
+    <!-- ========== Popular Professors ========== -->
     <section class="popular-professors-section" aria-labelledby="popular-professors-title">
       <div class="container">
 
@@ -194,8 +222,85 @@
     </section>
 
 
+    <!-- ========== FAQ جدید ========== -->
+    <section class="faq-section" aria-labelledby="faq-title">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-eyebrow">سوالات متداول</span>
+          <h2 id="faq-title">چیزی که شاید بپرسی</h2>
+          <p>سوالات پرتکرار دانشجوها درباره پارسورا.</p>
+        </div>
+
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>پارسورا چیه و چیکار می‌کنه؟</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>پارسورا یه سایته که اطلاعات اساتید و دروس دانشگاه خوراسگان رو در اختیارت می‌ذاره. می‌تونی استاد موردنظرت رو پیدا کنی، کلاس‌هاش رو ببینی و اطلاعات کامل درس‌ها رو یکجا داشته باشی.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>چطور می‌تونم استاد یا درس موردنظرم رو پیدا کنم؟</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>از نوار جستجوی بالای صفحه استفاده کن. می‌تونی نام استاد، نام درس، یا حتی کد درس رو وارد کنی. توی صفحه‌ی استادها و درس‌ها هم فیلترهای مختلفی داری که کارت رو راحت‌تر می‌کنه.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>می‌تونم استادها رو ذخیره کنم؟</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>بله! کنار هر استاد یه دکمه‌ی <strong>＋</strong> هست. با کلیک روش، استاد به لیست ذخیره‌شده‌هات اضافه می‌شه. بعداً می‌تونی از طریق دکمه‌ی «ذخیره‌شده‌ها» بهشون دسترسی داشته باشی. همین برای درس‌ها هم هست.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+  <summary class="faq-question">
+    <span>اطلاعات سایت چقدر دقیقه؟</span>
+    <span class="faq-icon" aria-hidden="true">+</span>
+  </summary>
+  <div class="faq-answer">
+    <p>اطلاعات بر اساس سامانه‌ی آموزشیار ترم جاری جمع‌آوری شده. اگه متوجه اشتباهی شدی، از راه‌های زیر بهمون اطلاع بده تا اصلاح کنیم:</p>
+    <div class="faq-contact-links">
+      <a href="https://t.me/ENgineerASB" target="_blank" rel="noopener" class="faq-contact-link">
+        <span aria-hidden="true">💬</span>
+        <span>@ENgineerASB</span>
+      </a>
+      <a href="mailto:abolfazlengineer9@gmail.com" class="faq-contact-link">
+        <span aria-hidden="true">✉️</span>
+        <span>abolfazlengineer9@gmail.com</span>
+      </a>
+    </div>
+  </div>
+</details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>پارسورا رایگانه؟</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer">
+              <p>کاملاً رایگانه! پارسورا با هدف کمک به دانشجوها ساخته شده و استفاده از همه‌ی امکاناتش برای همه‌ی دانشجویان خوراسگان آزاده.</p>
+            </div>
+          </details>
+
+        </div>
+
+      </div>
+    </section>
 
 
+    <!-- ========== CTA ========== -->
     <section class="cta-section" aria-labelledby="cta-title">
       <div class="container">
         <div class="cta-card">
@@ -215,6 +320,7 @@
   </main>
 
 
+  <!-- ========== Footer ========== -->
   <footer class="site-footer">
     <div class="container footer-grid">
 
